@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <title>Hash3Codes</title>
+</head>
+
+
+<!---------------------
+    NOTIFICATION
+----------------------->
+<h1 class="notification fillall">Fill All Fields</h1>
+<h1 class="notification inserted">Added Successfully</h1>
+<h1 class="notification updated">Updated Successfully</h1>
+
+<!---------------------
+    FORM CONTAINER
+----------------------->
+
+<body>
+   <div class="container">
+       <form action="/" method="post" enctype="multipart/form-data">
+		<h1 class="logo"><img src= "img/logo.png" style="width:80px;height:90px;"></h1>
+		     <select name="category">
+			      <option value="primi">Primi</option>
+				  <option value="secondari">Secondi</option>
+				  <option value="contorni">Contorni</option>
+				  <option value="dolci">Dolci</option>
+			</select>
+			
+			<input type="text" name="title" placeholder="Title">
+			<input type="number" name="price" placeholder="Price">
+			<input type="file" name="image">
+			<input type="submit" name="submit" value="Add">
+		</form>
+	</div>
+	<div id="button"><a href="orders.html">Orders</a></div>
+	<div id="button"><a href="cart-preview.html">Preview</a></div>
+<!-------------------------
+   MENU
+-------------------------->	
+
+   <div class="menu" id="menu">
+      <h1>Primi Piatti </h1>
+	  <div class="primi"></div>
+	  <h1>Secondi Piatti </h1>
+	  <div class="secondi"></div>
+	  <h1> Contorni </h1>
+	  <div class="contorni"></div>
+	  <h1>Dolci </h1>
+	  <div class="dolci"></div>
+	</div>
+	
+<!-------------------------
+   UPDATE FORM
+-------------------------->	
+	<div id="for-update">
+	    <form action="/" method="post" enctype="multipart/form-data">
+			<h1 class="logo"><img src= "img/logo.jpg" style="width:80px;height:90px;"></h1>
+		    <input style="opacity:0;" type="text" name="id">
+			<input type="text" name="newtitle" placeholder="New Price">
+			<input type="text" name="newprice" placeholder="New Price">
+			<input type="submit" name="update" value="Update">
+		</form>
+		<h1 id="close-update">X</h1>
+	</div>	
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyB_zvrKzH7vfagbnzKwsEjok3v0FHqLd44",
+    authDomain: "restaurant-9bb34.firebaseapp.com",
+    databaseURL: "https://restaurant-9bb34.firebaseio.com",
+    projectId: "restaurant-9bb34",
+    storageBucket: "restaurant-9bb34.appspot.com",
+    messagingSenderId: "1025493821348",
+    appId: "1:1025493821348:web:ed065a09fad1c50af2c331",
+    measurementId: "G-556TPT2KW2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>	
+	 
+<script src="menu.js"></script>	
+			
+</body>
+
+</html>
+  
+  
